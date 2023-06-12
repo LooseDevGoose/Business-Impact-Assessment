@@ -8,3 +8,5 @@ __pycache__
 alembic/versions/__pycache__
 .env
 env/*
+/node_modules
+```

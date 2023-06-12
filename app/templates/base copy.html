@@ -1,0 +1,53 @@
+{# base.html #}
+
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Business Impact Assessment</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='dist/css/output.css')}}">
+</head>
+<body class="bg-slate-900">
+  
+    <!--Navbar-->
+    <div class="navbar bg-base-100">
+        <div class="flex-1">
+            <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+        </div>
+        <div class="flex-none">
+            <ul class="menu menu-horizontal px-1">
+            <li><a>Link</a></li>
+            <li>
+                <details>
+                <summary>
+                    Parent
+                </summary>
+                <ul class="p-2 bg-base-100">
+                    <li><a>Link 1</a></li>
+                    <li><a>Link 2</a></li>
+                </ul>
+                </details>
+            </li>
+            </ul>
+        </div>
+        </div>
+                
+
+        <!--Body-->
+       
+            <main class="container  min-h-100 d-inline-block flex-grow-1 mb-4 border-2 rounded">
+                <div class="p-4">
+                <!-- {{ render_messages(container=False, dismissible=True) }} -->
+                {% block content %}{% endblock %}
+                </div>
+            </main>
+   
+   
+        <!--Footer-->
+        <footer class="text-center text-lg-start text-muted mt-auto">
+            <span class="text-muted">{% include "incl_footer.html" %}</span>
+        </footer>
+ 
+</body>
+</html>
